@@ -107,10 +107,10 @@ public class Launcher {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         List<String> commands = new ArrayList<>();
-        commands.add("predict");
+        /*commands.add("predict");
         commands.add("fibo");
         commands.add("quit");
-        commands.add("freq");
+        commands.add("freq");*/
 
         String input = "";
         while(!"quit".equals(input)){
