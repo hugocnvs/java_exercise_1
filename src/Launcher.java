@@ -193,7 +193,7 @@ public class Launcher {
 
             for(Command cmd : commands)
             {
-                if(Objects.equals(input, cmd.name())){
+                if(Objects.equals(input, cmd.name().toLowerCase())){
                     boolean run = cmd.run(scanner);
                     if (run) {
                         System.exit(0);
