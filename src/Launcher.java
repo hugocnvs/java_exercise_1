@@ -103,7 +103,7 @@ public class Launcher {
 
         }
     }
-    public static class predict implements Command
+    /*public static class predict implements Command
     {
         @Override
         public String name() {
@@ -175,7 +175,7 @@ public class Launcher {
             }
 
         }
-    }
+    }*/
     public static class predict implements Command
     {
         @Override
