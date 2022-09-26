@@ -134,7 +134,7 @@ public class Launcher {
                     if(run == true){ System.exit(0);}
                 } else
                 {
-                    System.out.println("Unkown command");
+                    System.out.println("Unknown command");
                 }
             }
             //new freq().run(scanner);
