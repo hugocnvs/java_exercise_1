@@ -115,27 +115,30 @@ public class Launcher {
         String input = "";
         while(!"quit".equals(input)){
             input = scanner.nextLine();
-            if(commands.contains(input))
-            {
-                if("predict".equals(input))
-                {
+            if(commands.contains(input)) {
+                if ("predict".equals(input)) {
                     //
-                } else if ("fibo".equals(input))
-                {
+                } else if ("fibo".equals(input)) {
                     boolean run = new fibo().run(scanner);
-                    if(run == true){ System.exit(0);}
-                } else if ("freq".equals(input))
-                {
+                    if (run == true) {
+                        System.exit(0);
+                    }
+                } else if ("freq".equals(input)) {
                     boolean run = new freq().run(scanner);
-                    if(run == true){ System.exit(0);}
-                } else if ("quit".equals(input))
-                {
+                    if (run == true) {
+                        System.exit(0);
+                    }
+                } else if ("quit".equals(input)) {
                     boolean run = new quit().run(scanner);
-                    if(run == true){ System.exit(0);}
-                } else
-                {
-                    System.out.println("Unknown command");
+                    if (run == true) {
+                        System.exit(0);
+                    }
                 }
+
+            }
+            else
+            {
+                System.out.println("Unknown command");
             }
             //new freq().run(scanner);
 
