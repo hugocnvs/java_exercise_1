@@ -186,7 +186,7 @@ public class Launcher {
         commands.add(new fibo());
         String input = "";
 
-        do{
+        while(!"quit".equals(input)){
             input = scanner.nextLine();
 
             for(Command cmd : commands)
@@ -201,6 +201,6 @@ public class Launcher {
             }
             System.out.println("Unknown command");
 
-        }while(!"quit".equals(input));
+        }
     }
 }
