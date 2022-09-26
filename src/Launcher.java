@@ -230,10 +230,12 @@ public class Launcher {
             }
             return sortie;
         }*/
-
+        public String resolve_predict(Path path_file, String user_input){
+            return "the internet tend to make a reader will be distracted by the internet tend to make a reader will be";
+        }
         @Override
         public boolean run(Scanner scanner) {
-            /*try {
+            try {
                 System.out.println("Path of file to read to : ");
                 String line = scanner.nextLine();
                 var path_file = Paths.get(line);
@@ -246,10 +248,7 @@ public class Launcher {
             {
                 System.out.println("Unreadable file "+ex.getMessage());
                 return false;
-            }*/
-            System.out.println("the internet tend to make a reader will be distracted by the internet tend to make a reader will be");
-            return true;
-
+            }
         }
     }
 
