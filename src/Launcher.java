@@ -116,7 +116,7 @@ public class Launcher {
         while(!"quit".equals(input)){
             input = scanner.nextLine();
             if(commands.contains(input)) {
-                if ("predict".equals(input)) {
+                /*if ("predict".equals(input)) {
                     //
                 } else if ("fibo".equals(input)) {
                     boolean run = new fibo().run(scanner);
@@ -133,17 +133,12 @@ public class Launcher {
                     if (run == true) {
                         System.exit(0);
                     }
-                }
-
+                }*/
             }
             else
             {
                 System.out.println("Unknown command");
             }
-            //new freq().run(scanner);
-
         }
-
-
     }
 }
