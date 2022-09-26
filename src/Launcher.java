@@ -179,42 +179,28 @@ public class Launcher {
 
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
-        List<String> commands = new ArrayList<>();
-        commands.add("predict");
-        commands.add("fibo");
-        commands.add("quit");
-        commands.add("freq");
-
+        List<Command> commands = new ArrayList<Command>();
+        commands.add(new quit());
+        commands.add(new freq());
+        commands.add(new predict());
+        commands.add(new fibo());
         String input = "";
-        while(!"quit".equals(input)){
+
+        do{
             input = scanner.nextLine();
-            if(commands.contains(input)) {
-                if ("predict".equals(input)) {
-                    boolean run = new predict().run(scanner);
-                    if (run) {
-                        System.exit(0);
-                    }
-                } else if ("fibo".equals(input)) {
-                    boolean run = new fibo().run(scanner);
-                    if (run) {
-                        System.exit(0);
-                    }
-                } else if ("freq".equals(input)) {
-                    boolean run = new freq().run(scanner);
-                    if (run) {
-                        System.exit(0);
-                    }
-                } else if ("quit".equals(input)) {
-                    boolean run = new quit().run(scanner);
+
+            for(Command cmd : commands)
+            {
+                if(Objects.equals(input, cmd.name())){
+                    boolean run = cmd.run(scanner);
                     if (run) {
                         System.exit(0);
                     }
                 }
+
             }
-            else
-            {
-                System.out.println("Unknown command");
-            }
-        }
+            System.out.println("Unknown command");
+
+        }while(!"quit".equals(input));
     }
 }
