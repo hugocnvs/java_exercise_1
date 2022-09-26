@@ -185,8 +185,10 @@ public class Launcher {
         commands.add(new predict());
         commands.add(new fibo());
         String input = "";
+        int offsset = 0;
+        boolean flag = true;
 
-        while(!"quit".equals(input)){
+       do{
             input = scanner.nextLine();
 
             for(Command cmd : commands)
@@ -195,12 +197,19 @@ public class Launcher {
                     boolean run = cmd.run(scanner);
                     if (run) {
                         System.exit(0);
+                        flag = false;
                     }
+                } else{
+                    offsset+=1;
                 }
 
             }
-            System.out.println("Unknown command");
+            if(offsset == commands.size())
+            {
+                System.out.println("Unknown command");
+                offsset = 0;
+            }
 
-        }
+        } while(flag);
     }
 }
